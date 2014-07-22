@@ -10,7 +10,8 @@
 	<!-- css -->
   	<link rel="stylesheet" type="text/css" href="<?=base_url();?>statics/foundation/css/normalize.css">
   	<link rel="stylesheet" type="text/css" href="<?=base_url();?>statics/foundation/css/foundation.css">
-  	<link rel="stylesheet" type="text/css" href="<?=base_url();?>statics/css/estilo.css">
+  	<link rel="stylesheet" type="text/css" href="<?=base_url();?>statics/css/style.css">
+  	<link rel="stylesheet" type="text/css" href="<?=base_url();?>statics/css/login_style.css">
 	<!-- JS -->
 	<script src="<?=base_url();?>statics/foundation/js/vendor/modernizr.js"></script>
 	<script src="<?=base_url();?>statics/foundation/js/vendor/jquery.js"></script>
@@ -27,7 +28,7 @@
 		<nav class="top-bar" data-topbar>
 			<ul class="title-area">
 				<li class="name">
-					<h1><a href="#">My Site</a></h1>
+					<h1><a href="#">Nombre de la revista</a></h1>
 				</li> 
 				<!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone --> 
 				<li class="toggle-topbar menu-icon">
@@ -53,16 +54,9 @@
 		</nav>
 	</div>
 	<div class="row">
-		<div class="large-5 small-5 small-centered large-centered columns login bordeBlanco">
-			<div class="large-12 large-centered columns">
-					
-			</div>
-			<fieldset class="fondoForm">
-				<div class="row">
-					<?php if (isset($msj)) {
-						echo $msj;
-					} ?>
-				</div>
+		<div class="large-6 small-6 small-centered large-centered columns spaceTop">
+			<fieldset class="">
+				
 				<form action='<?=base_url();?>index.php/login/verificarUsuario' method='post' name='process' accept-charset="utf-8" enctype="multipart/form-data">
 					<div class="row">
 						<div class="large-8 small-10 small-centered large-centered columns">
@@ -80,7 +74,7 @@
 						</div>
 					</div>
 					<div class="large-8 small-10 small-centered large-centered columns">
-						<a class="right" href="#">Recuperar contraseña</a>
+						<a class="right" href="#">Si no está registrado, registrese</a>
 					</div>
 				</form>
 			</fieldset>

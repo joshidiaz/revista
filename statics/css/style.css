@@ -1,0 +1,35 @@
+/*Clases para cambiar la apariencia de foundation*/
+/*
+	Verde claro: #57a519
+	Verde oscuro: #488815
+	Negro: #272727;
+	Gris oscuro: #333333;
+*/
+.top-bar-section li.active:not(.has-form) a:not(.button) {
+    background: none repeat scroll 0 0 #57a519;
+    color: white;
+    line-height: 45px;
+    padding: 0 15px;
+}
+.top-bar-section li.active:not(.has-form) a:hover:not(.button){
+	background: none repeat scroll 0 0 #272727;
+}
+button, .button {
+    background-color: #57a519;
+    border-color: #488815;
+}
+button:hover, .button:hover, button:focus, .button:focus{
+	background-color: #488815;
+    border-color: #488815;
+}
+a{
+	color: #57a519;
+}
+a:hover, a:focus{
+	color: #488815;
+}
+
+/*CSS General del sitio*/
+.borderGeneral{
+	border: solid 1px black;
+}
