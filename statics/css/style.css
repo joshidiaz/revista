@@ -33,3 +33,7 @@ a:hover, a:focus{
 .borderGeneral{
 	border: solid 1px black;
 }
+
+.aviso{
+	color:#ff7f2a;
+}

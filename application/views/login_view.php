@@ -60,12 +60,12 @@
 				<form action='<?=base_url();?>index.php/login/verificarUsuario' method='post' name='process' accept-charset="utf-8" enctype="multipart/form-data">
 					<div class="row">
 						<div class="large-8 small-10 small-centered large-centered columns">
-						    <input type="text" name="nombreLabel" placeholder="Usuario"  autofocus required>
+						    <input type="text" name="userName" placeholder="Usuario"  autofocus required>
 						</div>
 					</div>
 					<div class="row">
 						<div class="large-8 small-10 small-centered large-centered columns">
-						    <input type="password" name="contrasenia" placeholder="Contraseña" required>
+						    <input type="password" name="password" placeholder="Contraseña" required>
 						</div>
 					</div>
 					<div class="row">
