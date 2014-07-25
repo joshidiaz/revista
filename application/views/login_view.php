@@ -24,6 +24,7 @@
 
 
 <body>
+	<script src="<?=base_url();?>statics/foundation/js/foundation/foundation.topbar.js"></script>
 	<div class="row">
 		<nav class="top-bar" data-topbar>
 			<ul class="title-area">

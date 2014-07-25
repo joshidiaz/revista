@@ -28,12 +28,43 @@ a{
 a:hover, a:focus{
 	color: #488815;
 }
+.tabs dd > a {
 
+	background: #333333;
+	color: #ffffff;
+	padding-top: 1rem;
+	padding-right: 1rem;
+	padding-bottom: 1.0625rem;
+	padding-left: 1rem;
+	font-family: "PT", PT, sans-serif;
+	font-style: sans-serif;
+	font-weight:bold;
+	font-size: 20px;
+}
+.tabs dd > a:hover, .tabs, .tab-title > a:hover {
+	background: #272727;
+}
+
+.tabs.vertical {
+	width: 100%;
+	float: left;
+	margin-bottom: 1.25rem;
+}
+.tabs dd.active a {
+	background: #57a519;
+	color: #ffffff
+}
 /*CSS General del sitio*/
+
 .borderGeneral{
 	border: solid 1px black;
 }
-
+.borderBody{
+	border: solid 1px black;
+}
 .aviso{
 	color:#ff7f2a;
+}
+.topSpace10{
+	margin-top: 2%;
 }
