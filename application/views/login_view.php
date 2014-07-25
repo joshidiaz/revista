@@ -1,28 +1,3 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Ingresar</title>
-	<link rel="stylesheet" href="">
-	
-	<!-- css -->
-  	<link rel="stylesheet" type="text/css" href="<?=base_url();?>statics/foundation/css/normalize.css">
-  	<link rel="stylesheet" type="text/css" href="<?=base_url();?>statics/foundation/css/foundation.css">
-  	<link rel="stylesheet" type="text/css" href="<?=base_url();?>statics/css/style.css">
-  	<link rel="stylesheet" type="text/css" href="<?=base_url();?>statics/css/login_style.css">
-	<!-- JS -->
-	<script src="<?=base_url();?>statics/foundation/js/vendor/modernizr.js"></script>
-	<script src="<?=base_url();?>statics/foundation/js/vendor/jquery.js"></script>
-	<script src="<?=base_url();?>statics/foundation/js/vendor/placeholder.js"></script>
-	<script src="<?=base_url();?>statics/foundation/js/foundation.min.js"></script>
-	<script src="<?=base_url();?>statics/foundation/js/foundation/foundation.alert.js"></script>
-
-</head>
-
-
-
 <body>
 	<script src="<?=base_url();?>statics/foundation/js/foundation/foundation.topbar.js"></script>
 	<div class="row">

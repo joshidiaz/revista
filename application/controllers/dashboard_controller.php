@@ -14,6 +14,11 @@ class Dashboard_controller extends CI_Controller {
 		$this->load->view('dashboard_view', NULL, FALSE);
 	}
 
+	public function getProfile() 
+	{
+		$this->load->view('head_view', NULL, FALSE);
+		$this->load->view('profile_view', NULL, FALSE);
+	}
 }
 
 /* End of file dashboard_controller.php */

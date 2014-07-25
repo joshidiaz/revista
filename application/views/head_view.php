@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="es">
 <head>
-	<title>Dashboard</title>
+	<title>Revista cim</title>
 	<meta charset="utf-8">
   	<meta name="viewport" content="width=device-width, initial-scale=1.0">
   	<!-- css -->

@@ -37,7 +37,7 @@
 	<div class="row">
 		<div class="large-12 small-12 columns topSpace10">
 			<!-- Primera columna -->
-			<div class="large-3 small-3	columns">
+			<div class="large-2 small-2	columns">
 				<div class="row bordeGris">
 					
 				</div>
@@ -51,17 +51,16 @@
 				</div>
 			</div>
 			<!-- Segunda columna -->
-			<div id="contenedor" class="large-9 small-9 columns">
+			<div id="contenedor" class="large-10 small-10 columns ">
 				<div class="row">
 					<!-- Contenido de cada Tab Perfil-->
 					<div class="tabs-content vertical">
 						<!-- Contenido del Tab  -->
 						<div class="content active" id="panel1a">
 							<div class="row">
-								<div id="" class="large-12 columns">
-									Contenido Tab Perfil
-									<!-- <iframe name="datos" width="100%" height="1000px" scrolling="no" id="datos" frameborder="0"></iframe> -->
-								</div>
+								
+									<iframe name="datos" width="120%" height="1000px" scrolling="no" id="datos" frameborder="0" src="<?=base_url();?>index.php/dashboard_controller/getProfile"></iframe>
+								
 							</div>
 						</div>
 						<!-- Contenido del Tab Artículos -->
