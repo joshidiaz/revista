@@ -15,6 +15,7 @@
 	<script src="<?=base_url();?>statics/foundation/js/vendor/placeholder.js"></script>
 	<script src="<?=base_url();?>statics/foundation/js/foundation.min.js"></script>
 	<script src="<?=base_url();?>statics/foundation/js/foundation/foundation.alert.js"></script>
+	<script src="<?=base_url();?>statics/js/newAccount.js"></script>
 	
 	<script type="text/javascript">var urlBase = '<?=base_url(); ?>';</script>
 </head>
