@@ -55,15 +55,18 @@ class Account_controller extends CI_Controller {
 		}
 	}
 
-	private function generateUser($name, $lastName){
-		
-
-	}
+	public function generateUser($name, $lastName){
+		$first = $name[0].$lastName[0];
+		$date = date('Dy');
+		$number = rand(111,999);
+		$userName = $first.$date.$number;
+		echo strtoupper($userName);
+	} 
 
 
 	public function generatePassword($length=8,$uc=TRUE,$n=TRUE){
 	    $source = 'abcdefghijklmnopqrstuvwxyz';
-	    if($uc==1) $source .= 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+	    if($uc == 1) $source .= 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 	    if($n==1) $source .= '1234567890';
 	   
 	    if($length>0){
