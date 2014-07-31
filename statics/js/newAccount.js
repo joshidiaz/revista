@@ -1,4 +1,20 @@
 $(document).on('ready', function(){
+
+    $.post(urlBase+"index.php/account_controller/getDisciplines", {
+    }, function(data) {
+        $("#disiplineName").html(data);
+    })
+
+    $.post(urlBase+"index.php/account_controller/getSubdisciplines", {
+    }, function(data) {
+        $("#subdisiplineName").html(data);
+    })
+
+    $.post(urlBase+"index.php/account_controller/getSpecialisms", {
+    }, function(data) {
+        $("#specialismName").html(data);
+    })
+
 	$('form').on('submit',function(e){
 		var request = $('form').attr('action');
 		var method = $('form').attr('method');
@@ -24,5 +40,6 @@ $(document).on('ready', function(){
 			timeout: 10000
 		})
 	})
+
 
 })

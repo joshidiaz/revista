@@ -8,11 +8,15 @@ class Account_model extends CI_Model {
 	}
 
 	public function setUser($data){
+		// echo "<pre>";
+		// 	print_r($data);
+		// echo "</pre>";
+		
 		$this->db->insert('user', $data);
-		$this->db->select_max('iduser');
-		$consulta=$this->db->get('user');
-		$aux=$consulta->result_array();
-		return ($aux[0]['iduser']);
+		// $this->db->select_max('iduser');
+		// $consulta=$this->db->get('user');
+		// $aux=$consulta->result_array();
+		// return ($aux[0]['iduser']);
 
 	}
 

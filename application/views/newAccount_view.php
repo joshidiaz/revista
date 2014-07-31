@@ -112,13 +112,17 @@
 						<div class="large-12 small-12 columns">
 							<div class="large-6 small-6 columns">
 								<label>Disciplina <b class="aviso"> (*)</b>
-									<input name="disiplineName" type="text" required/>
+									<select name="iddisipline" id="disiplineName" required>
+										
+									</select>
 								</label>
 								<small class="error">La disciplina es obligatoria.</small>
 							</div>
 							<div class="large-6 small-6 columns">
 								<label>Subdisciplina <b class="aviso"> (*)</b>
-									<input name="subdisiplineName" type="text" required/>
+									<select name="idspecialism" id="subdisiplineName" required>
+										
+									</select>
 								</label>
 								<small class="error">La subdisciplina es obligatorio.</small>
 							</div>
@@ -128,14 +132,16 @@
 						<div class="large-12 small-12 columns">
 							<div class="large-6 small-6 columns">
 								<label>Especialidad <b class="aviso"> (*)</b>
-									<input name="specialismName" type="text" required/>
+									<select name="idsubDiscipline" id="specialismName" required>
+										
+									</select>
 								</label>
 								<small class="error">La especialidad es obligatorio.</small>
 							</div>
 							<div class="large-6 small-6 columns">
 								<label>Nivel en el SNI  <b class="aviso"> (*)</b>
-							        <select required>
-							          <option value="">Seleciona un nivel</option>
+							        <select name="sniLevel" required>
+							          <option value="">Selecione un nivel</option>
 							          <option value="1">Nivel 1</option>
 							          <option value="2">Nivel 2</option>
 							          <option value="3">Nivel 3</option>

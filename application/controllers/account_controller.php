@@ -19,9 +19,10 @@ class Account_controller extends CI_Controller {
 		$userData=$this->input->post();
 		if (isset($userData) && !empty($userData)) {
 			$idUser = $this->account_model->setUser($userData);
-			if (isset($idUser) && !empty($idUser)) {
-				echo "guardado";
-			}
+			echo "correcto";
+			// if (isset($idUser) && !empty($idUser)) {
+			// 	echo "guardado";
+			// }
 		}else{ 
 			echo "Incorrecto";
 		}
@@ -32,26 +33,51 @@ class Account_controller extends CI_Controller {
 
 	public function getDisciplines(){
 		$disciplines=$this->account_model->getDisciplines();
-			echo "<pre>";
-				print_r($disciplines);
-			echo "</pre>";
+		echo "<option value=''>Seleccione una disciplina</option>";
+		foreach ($disciplines as $discipline) {
+			echo "<option value=".$discipline['iddiscipline'].">".$discipline['disciplineName']."</option>";
+		}
 	}
 
 	public function getSubdisciplines(){
 		$subdisciplines=$this->account_model->getSubdisciplines();
-			echo "<pre>";
-				print_r($subdisciplines);
-			echo "</pre>";
+		echo "<option value=''>Seleccione una subdisciplina</option>";
+		foreach ($subdisciplines as $subdiscipline) {
+			echo "<option value=".$subdiscipline['idsubDiscipline'].">".$subdiscipline['subdisciplineName']."</option>";
+		}
 	}
 
 	public function getSpecialisms(){
 		$specialisms=$this->account_model->getSpecialisms();
-			echo "<pre>";
-				print_r($specialisms);
-			echo "</pre>";
+		echo "<option value=''>Seleccione una especialidad</option>";
+		foreach ($specialisms as $specialism) {
+			echo "<option value=".$specialism['idspecialism'].">".$specialism['specialismName']."</option>";
+		}
+	}
+
+	private function generateUser($name, $lastName){
+		
+
 	}
 
 
+	public function generatePassword($length=8,$uc=TRUE,$n=TRUE){
+	    $source = 'abcdefghijklmnopqrstuvwxyz';
+	    if($uc==1) $source .= 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+	    if($n==1) $source .= '1234567890';
+	   
+	    if($length>0){
+	        $rstr = "";
+	        $source = str_split($source,1);
+	        for($i=1; $i<=$length; $i++){
+	            mt_srand((double)microtime() * 1000000);
+	            $num = mt_rand(1,count($source));
+	            $rstr .= $source[$num-1];
+	        }
+	    }
+	    //return $rstr;
+	    echo $rstr;
+	}
 }
 
 /* End of file account_controller.php */
