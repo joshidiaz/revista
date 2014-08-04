@@ -83,13 +83,13 @@
 						<div class="large-12 small-12 columns">
 							<div class="large-6 small-6 columns">
 								<label>Correo electrónico <b class="aviso"> (*)</b>
-									<input id="email" type="email"   required/>
+									<input id="email1" type="email" patter="email" required/>
 								</label>
 								<small class="error">El correo electrónico es obligatorio.</small>
 							</div>
 							<div class="large-6 small-6 columns">
 								<label>Confirmar correo electrónico<b class="aviso"> (*)</b>
-									<input name="email" type="email"  data-equalto="email" required/>
+									<input id="email2" name="email" type="email" patter="email" data-equalto="email1" required/>
 								</label>
 								<small class="error">Los correos eletrónicos no coinciden.</small>
 							</div>
@@ -194,6 +194,5 @@
 	<script>
 		$(document).foundation();
 	</script>
-	<script>alert('');</script>
 </body>
 </html>

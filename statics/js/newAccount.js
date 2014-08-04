@@ -20,26 +20,32 @@ $(document).on('ready', function(){
 		var method = $('form').attr('method');
 
 		e.preventDefault(); 
-		// alert(method);
-		$.ajax({
-			url: request,
-			type: method,
-			data: $('form').serialize(),
-			success: function(resp) {
-				$("#aviso").html('<script>alert("Su registro a sido realizado con éxito.");</script>');
-				console.log(resp)
-				window.location = urlBase+"index.php/login_controller";
-			},
-			error: function(jqXHR, status, error){
-				$("#aviso").html('<script>alert("Algo salió mal con su registro vuelva a intentarlo.");</script>');
-				console.log(status)
-				console.log(error)
-			},
-			complete: function(jqXHR, status){
-				console.log(status)
-			},
-			timeout: 10000
-		})
+
+		var em1 = $('#email1').val();
+		var em2 = $('#email2').val();
+		console.log(em1);
+		console.log(em2);
+		if((em1 == em2) && (em1 != "") && (em2 != "")){
+			$.ajax({
+				url: request,
+				type: method,
+				data: $('form').serialize(),
+				success: function(resp) {
+					$("#aviso").html('<script>alert("Su registro a sido realizado con éxito.");</script>');
+					// console.log(resp);
+					window.location = urlBase+"index.php/login_controller";
+				},
+				error: function(jqXHR, status, error){
+					$("#aviso").html('<script>alert("Algo salió mal con su registro vuelva a intentarlo.");</script>');
+					// console.log(status)
+					// console.log(error)
+				},
+				complete: function(jqXHR, status){
+					// console.log(status)
+				},
+				timeout: 10000
+			})	
+		}
 	})
 
 

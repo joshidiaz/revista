@@ -17,7 +17,8 @@ class Account_controller extends CI_Controller {
 	public function setUser()
 	{
 		$userData=$this->input->post();
-		if (isset($userData) && !empty($userData)) {
+		if (isset($userData) && !empty($userData) && !empty($userData['email']) ) {
+
 			$userName = $this->generateUser($userData['name'],$userData['lastName']);
 			$password = $this->generatePassword(8, TRUE, TRUE);
 			$userData['userName'] = $userName;
