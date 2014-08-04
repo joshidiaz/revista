@@ -18,6 +18,13 @@ class Account_controller extends CI_Controller {
 	{
 		$userData=$this->input->post();
 		if (isset($userData) && !empty($userData)) {
+			$userName = $this->generateUser($userData['name'],$userData['lastName']);
+			$password = $this->generatePassword(8, TRUE, TRUE);
+			$userData['userName'] = $userName;
+			$userData['password'] = $password;
+					// echo "<pre>";
+					// 	print_r($userData);
+					// echo "</pre>";
 			$idUser = $this->account_model->setUser($userData);
 			echo "correcto";
 			// if (isset($idUser) && !empty($idUser)) {
@@ -60,7 +67,8 @@ class Account_controller extends CI_Controller {
 		$date = date('Dy');
 		$number = rand(111,999);
 		$userName = $first.$date.$number;
-		echo strtoupper($userName);
+		return strtoupper($userName);
+		
 	} 
 
 
@@ -78,8 +86,7 @@ class Account_controller extends CI_Controller {
 	            $rstr .= $source[$num-1];
 	        }
 	    }
-	    //return $rstr;
-	    echo $rstr;
+	    return $rstr;
 	}
 }
 

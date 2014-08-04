@@ -26,11 +26,12 @@ $(document).on('ready', function(){
 			type: method,
 			data: $('form').serialize(),
 			success: function(resp) {
-				$("#aviso").html('<b>Todo bien</b>');
+				$("#aviso").html('<script>alert("Su registro a sido realizado con éxito.");</script>');
 				console.log(resp)
+				window.location = urlBase+"index.php/login_controller";
 			},
 			error: function(jqXHR, status, error){
-				$("#aviso").html('<b>Algo salio mal</b>');
+				$("#aviso").html('<script>alert("Algo salió mal con su registro vuelva a intentarlo.");</script>');
 				console.log(status)
 				console.log(error)
 			},
