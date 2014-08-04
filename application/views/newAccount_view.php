@@ -1,5 +1,9 @@
 
 <body>
+	<script type="text/javascript">
+		if(window.history.forward(1) != null)
+			window.history.forward(1);
+	 </script>
 	<script src="<?=base_url();?>statics/foundation/js/foundation/foundation.js"></script>
   	<script src="<?=base_url();?>statics/foundation/js/foundation/foundation.abide.js"></script>
 	<div class="row">
@@ -47,29 +51,29 @@
 						<div class="large-12 small-12 columns">
 							<div class="large-6 small-6 columns">
 								<label>Nombre(s) <b class="aviso"> (*)</b>
-									<input name="name" type="text" required/>
+									<input name="name" type="text" pattern="alpha" required/>
 								</label>
-								<small class="error">El nombre es obligatorio.</small>
+								<small class="error">El nombre es obligatorio y debe contener únicamente letras.</small>
 							</div>
 							<div class="large-6 small-6 columns">
 								<label>Apellidos <b class="aviso"> (*)</b>
-									<input name="lastName" type="text" required/>
+									<input name="lastName" type="text" pattern="alpha" required/>
 								</label>
-								<small class="error">Los apellidos son obligatorios.</small>
+								<small class="error">Los apellidos son obligatorios y debe contener únicamente letras.</small>
 							</div>
 						</div>
 					</div>
 					<div class="row">
 						<div class="large-12 small-12 columns">
 							<div class="large-6 small-6 columns">
-								<label>Telefono <b class="aviso"> (*)</b>
-									<input name="phone" type="text" required/>
+								<label>Teléfono <b class="aviso"> (*)</b>
+									<input name="phone" type="text" pattern="number" required/>
 								</label>
-								<small class="error">El telefono es obligatorio.</small>
+								<small class="error">El teléfono es obligatorio y debe contener únicamente numeros.</small>
 							</div>
 							<div class="large-6 small-6 columns">
 								<label>Institución o universidad<b class="aviso"> (*)</b>
-									<input name="institution" type="text" required/>
+									<input name="institution" type="text" pattern="alpha_numeric" required/>
 								</label>
 								<small class="error">La institución es obligatoria.</small>
 							</div>
@@ -78,16 +82,16 @@
 					<div class="row">
 						<div class="large-12 small-12 columns">
 							<div class="large-6 small-6 columns">
-								<label>Correo eléctronico <b class="aviso"> (*)</b>
-									<input  type="text" required/>
+								<label>Correo electrónico <b class="aviso"> (*)</b>
+									<input id="email" type="email"   required/>
 								</label>
-								<small class="error">El correo electronico es obligatorio.</small>
+								<small class="error">El correo electrónico es obligatorio.</small>
 							</div>
 							<div class="large-6 small-6 columns">
-								<label>Confirmar correo eléctronico<b class="aviso"> (*)</b>
-									<input name="email" type="text" required/>
+								<label>Confirmar correo electrónico<b class="aviso"> (*)</b>
+									<input name="email" type="email"  data-equalto="email" required/>
 								</label>
-								<small class="error">La confirmación del correo es obligatorio.</small>
+								<small class="error">Los correos eletrónicos no coinciden.</small>
 							</div>
 						</div>
 					</div>
@@ -96,15 +100,15 @@
 						<div class="large-12 small-12 columns">
 							<div class="large-6 small-6 columns">
 								<label>Nivel académico <b class="aviso"> (*)</b>
-									<input name="academicGrade" type="text" required/>
+									<input name="academicGrade" type="text" pattern="alpha_numeric" required/>
 								</label>
-								<small class="error">El nivel academico es obligatorio.</small>
+								<small class="error">El nivel académico es obligatorio.</small>
 							</div>
 							<div class="large-6 small-6 columns">
-								<label>Área de interes <b class="aviso"> (*)</b>
-									<input name="areaInterest" type="text" required/>
+								<label>Área de interés <b class="aviso"> (*)</b>
+									<input name="areaInterest" type="text" pattern="alpha_numeric" required/>
 								</label>
-								<small class="error">El área de interes es obligatorio.</small>
+								<small class="error">El área de interés es obligatorio.</small>
 							</div>
 						</div>
 					</div>
@@ -158,19 +162,19 @@
 						<div class="large-12 small-12 columns">
 							<div class="large-12 small-12 columns">
 								<label>Títulos de los últimos 5 artículos<b class="aviso"> (*)</b>
-									<textarea name="lastFiveArticles" required></textarea>
+									<textarea name="lastFiveArticles" pattern="alpha_numeric" required></textarea>
 								</label>
 								<small class="error">Este campo es obligatorio.</small>
 							</div>
 							<div class="large-12 small-12 columns">
 								<label>Títulos de los últimos 5 proyectos de investigación<b class="aviso"> (*)</b>
-									<textarea name="lastFiveResearch" required></textarea>
+									<textarea name="lastFiveResearch" pattern="alpha_numeric" required></textarea>
 								</label>
 								<small class="error">Este campo es obligatorio.</small>
 							</div>
 							<div class="large-12 small-12 columns">
 								<label>Información relevante que considere 
-									<textarea name="moreInformation"></textarea>
+									<textarea name="moreInformation" pattern="alpha_numeric"></textarea>
 								</label>
 							</div>
 						</div>
@@ -178,7 +182,7 @@
 					<div class="row">
 						<div class="large-6 small-6 small-centered large-centered columns">
 							<!-- <a href="#" class="button expand">Enviar</a> -->
-							<input type="submit" class="button expand" value="Enviar">
+							<input type="submit" class="button expand" value="Enviar"> 
 						</div>
 					</div>
 				</form>

@@ -50,7 +50,7 @@
 						</div>
 					</div>
 					<div class="large-8 small-10 small-centered large-centered columns">
-						<a class="right" href="#">Si no está registrado, registrese</a>
+						<a class="right" href="<?=base_url();?>index.php/account_controller">Si no está registrado, registrese</a>
 					</div>
 				</form>
 			</fieldset>
