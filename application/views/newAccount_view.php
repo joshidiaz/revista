@@ -190,6 +190,6 @@
 	<script>
 		$(document).foundation();
 	</script>
-	
+	<script>alert('');</script>
 </body>
 </html>
