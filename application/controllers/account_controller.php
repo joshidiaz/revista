@@ -23,20 +23,11 @@ class Account_controller extends CI_Controller {
 			$password = $this->generatePassword(8, TRUE, TRUE);
 			$userData['userName'] = $userName;
 			$userData['password'] = $password;
-					// echo "<pre>";
-					// 	print_r($userData);
-					// echo "</pre>";
 			$idUser = $this->account_model->setUser($userData);
 			echo "correcto";
-			// if (isset($idUser) && !empty($idUser)) {
-			// 	echo "guardado";
-			// }
 		}else{ 
 			echo "Incorrecto";
 		}
-		// echo "<pre>";
-		// 	print_r($userData);
-		// echo "</pre>";
 	}
 
 	public function getDisciplines(){

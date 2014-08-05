@@ -18,16 +18,14 @@ $(document).on('ready', function(){
 				console.log(resp);
 			},
 			error: function(jqXHR, status, error){
-				$("#aviso").html('error');
+				$("#aviso").html('<div data-alert class="alert-box warning">Algo salió mal, por favor intente de nuevo.<a href="#" class="close">&times;</a> </div>');
 				console.log(status)
 				console.log(error)
 			},
 			complete: function(jqXHR, status){
 				console.log(status)
 			},
-			timeout: 10000
+			timeout: 1000
 		})	
 	})
-
-
 })
