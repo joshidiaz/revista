@@ -33,29 +33,33 @@
 	<div class="row">
 		<div class="large-6 small-6 small-centered large-centered columns spaceTop">
 			<fieldset class="">
-				<div class="large-12 small-12 columns" id="aviso">
-					
+				<div id="aviso" class="large-12 small-12 columns" >
+					<div data-alert class="alert-box warning" style="display: none;">
+						
+					</div>					
 				</div>
-				<form id="login" action='<?=base_url();?>index.php/login_controller/userAuthenticate' method='post' name='process' accept-charset="utf-8" enctype="multipart/form-data">
-					<div class="row">
-						<div class="large-8 small-10 small-centered large-centered columns">
-						    <input type="text" name="userName" placeholder="Usuario"  autofocus required>
+				<div class="large-12 small-12 columns">
+					<form id="login" action='<?=base_url();?>index.php/login_controller/userAuthenticate' method='post' name='process' accept-charset="utf-8" enctype="multipart/form-data">
+						<div class="row">
+							<div class="large-8 small-10 small-centered large-centered columns">
+							    <input type="text" name="userName" placeholder="Usuario"  autofocus required>
+							</div>
 						</div>
-					</div>
-					<div class="row">
-						<div class="large-8 small-10 small-centered large-centered columns">
-						    <input type="password" name="password" placeholder="Contraseña" required>
+						<div class="row">
+							<div class="large-8 small-10 small-centered large-centered columns">
+							    <input type="password" name="password" placeholder="Contraseña" required>
+							</div>
 						</div>
-					</div>
-					<div class="row">
-						<div class="large-8 small-10 small-centered large-centered columns">
-							<input type="submit" class="button expand [tiny small large]" value="Ingresar">
+						<div class="row">
+							<div class="large-8 small-10 small-centered large-centered columns">
+								<input type="submit" class="button expand [tiny small large]" value="Ingresar">
+							</div>
 						</div>
-					</div>
-					<div class="large-8 small-10 small-centered large-centered columns">
-						<a class="right" href="<?=base_url();?>index.php/account_controller">Si no está registrado, registrese</a>
-					</div>
-				</form>
+						<div class="large-8 small-10 small-centered large-centered columns">
+							<a class="right" href="<?=base_url();?>index.php/account_controller">Si no está registrado, registrese</a>
+						</div>
+					</form>
+				</div>
 			</fieldset>
 		</div>
 	</div>

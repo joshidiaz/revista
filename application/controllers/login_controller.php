@@ -19,27 +19,27 @@ class Login_controller extends CI_Controller {
 	public function userAuthenticate(){
 		$userData = $this->input->post();
 		$iduser = $this->account_model->userAuthenticate($userData);
-		if($iduser =! 0){
-			// $newData = array(
-			// 	'userName' => $userData['userName'],
-			// 	'password' => $userData['password'],
-			// 	'iduser' => $iduser,
-			// 	'logged_in' => TRUE
-  	// 		);
- 	 // 		$this->session->set_userdata($newData);
- 	 // 		$_SESSION = $this->session->all_userdata(); 
- 	 // 		if(!empty($_SESSION['userName'])){
- 		// 		redirect('dashboard_controller');
- 		// 	} 
-			echo $iduser;
+
+		if($iduser != 0){
+			$newData = array(
+				'userName' => $userData['userName'],
+				'password' => $userData['password'],
+				'iduser' => $iduser,
+				'logged_in' => TRUE
+  			);
+ 	 		$this->session->set_userdata($newData);
+ 	 		$_SESSION = $this->session->all_userdata(); 
+ 	 		if(!empty($_SESSION['userName'])){
+ 				redirect('dashboard_controller');
+ 			} 
  		} else {
+ 			$this->session->sess_destroy();
  			echo "incorrecto";
  		}
 	}
 
 	public function rebootSession(){
 	 	$this->session->sess_destroy(); 
-	  	$this->index();
  	}
 
 }

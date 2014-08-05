@@ -81,16 +81,18 @@ class Account_model extends CI_Model {
 	 	$query = $this->db->get();
 
 	 	if($query->num_rows() > 0){
-		 	$user = $query->result_array();
-		 	$pass = $user[0]['password'];
-		 	$iduser = $user[0]['iduser'];
-		 	if($accountData['password'] == $pass){
-		 		return $iduser;
-		 	}else{
-		 		return 0;
-		 	}
+	 		 echo "entre";
+		 	// $user = $query->result_array();
+		 	// $pass = $user[0]['password'];
+		 	// $iduser = $user[0]['iduser'];
+		 	// if($accountData['password'] == $pass){
+		 	// 	return $iduser;
+		 	// }else{
+		 	// 	return 0;
+		 	// }
 	 	}else{
 	 		return 0;
+	 		// echo "No entré";
 	 	}
 
  	}

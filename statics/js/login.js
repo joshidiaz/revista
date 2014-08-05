@@ -8,21 +8,21 @@ $(document).on('ready', function(){
 		$.ajax({
 			url: request,
 			type: method,
-			data: $('form').serialize(),
+			data: $('#login').serialize(),
 			success: function(resp) {
-				if(resp =! 'incorrecto'){
-					$("#aviso").html('<div data-alert class="alert-box warning"> <!-- Your content goes here --> <a href="#" class="close">&times;</a> </div>');					
+				if(resp == 'incorrecto'){
+					$("#aviso").html('<div data-alert class="alert-box warning">El usuario y/o contraseña que proporciono son incorrectos, por favor verifique e intente de nuevo.<a href="#" class="close">&times;</a> </div>');					
 				}
 				console.log(resp);
 				
 			},
 			error: function(jqXHR, status, error){
 				$("#aviso").html('error');
-				// console.log(status)
-				// console.log(error)
+				console.log(status)
+				console.log(error)
 			},
 			complete: function(jqXHR, status){
-				// console.log(status)
+				console.log(status)
 			},
 			timeout: 10000
 		})	
