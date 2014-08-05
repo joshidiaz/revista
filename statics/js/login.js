@@ -11,10 +11,11 @@ $(document).on('ready', function(){
 			data: $('#login').serialize(),
 			success: function(resp) {
 				if(resp == 'incorrecto'){
-					$("#aviso").html('<div data-alert class="alert-box warning">El usuario y/o contraseña que proporciono son incorrectos, por favor verifique e intente de nuevo.<a href="#" class="close">&times;</a> </div>');					
+					$("#aviso").html('<div data-alert class="alert-box warning">El usuario y/o contraseña que proporcionó son incorrectos, por favor verifique los datos e intente de nuevo.<a href="#" class="close">&times;</a> </div>');					
+				}else{
+					window.location = urlBase+"index.php/dashboard_controller";
 				}
 				console.log(resp);
-				
 			},
 			error: function(jqXHR, status, error){
 				$("#aviso").html('error');

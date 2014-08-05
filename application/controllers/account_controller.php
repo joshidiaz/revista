@@ -63,7 +63,7 @@ class Account_controller extends CI_Controller {
 		}
 	}
 
-	public function generateUser($name, $lastName){
+	private function generateUser($name, $lastName){
 		$first = $name[0].$lastName[0];
 		$date = date('Dy');
 		$number = rand(111,999);
@@ -73,7 +73,7 @@ class Account_controller extends CI_Controller {
 	} 
 
 
-	public function generatePassword($length=8,$uc=TRUE,$n=TRUE){
+	private function generatePassword($length=8,$uc=TRUE,$n=TRUE){
 	    $source = 'abcdefghijklmnopqrstuvwxyz';
 	    if($uc == 1) $source .= 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 	    if($n==1) $source .= '1234567890';

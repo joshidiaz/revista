@@ -30,7 +30,7 @@ class Login_controller extends CI_Controller {
  	 		$this->session->set_userdata($newData);
  	 		$_SESSION = $this->session->all_userdata(); 
  	 		if(!empty($_SESSION['userName'])){
- 				redirect('dashboard_controller');
+ 				echo 'correcto';
  			} 
  		} else {
  			$this->session->sess_destroy();
