@@ -41,7 +41,7 @@
 		<div class="large-12 small-12 small-centered large-centered columns">
 			<fieldset class="">
 				<legend>Registro de autor</legend>
-				<form data-abide action='<?=base_url();?>index.php/account_controller/setUser' method='post' name='process' accept-charset="utf-8" enctype="multipart/form-data">
+				<form id="account" data-abide action='<?=base_url();?>index.php/account_controller/setUser' method='post' name='process' accept-charset="utf-8" enctype="multipart/form-data">
 					<div class="row">
 						<div class="large-12 small-12 columns">
 							<label for="" class="aviso"> Campos obligatorios (*)</label>

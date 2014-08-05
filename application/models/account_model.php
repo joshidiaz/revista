@@ -73,7 +73,28 @@ class Account_model extends CI_Model {
 		}
 		else{return 0;}
 	}
-	
+
+	public function userAuthenticate($accountData){
+	 	$this->db->select('iduser,userName,password');
+	 	$this->db->from('user');
+	 	$this->db->where('userName', $accountData['userName']);
+	 	$query = $this->db->get();
+
+	 	if($query->num_rows() > 0){
+		 	$user = $query->result_array();
+		 	$pass = $user[0]['password'];
+		 	$iduser = $user[0]['iduser'];
+		 	if($accountData['password'] == $pass){
+		 		return $iduser;
+		 	}else{
+		 		return 0;
+		 	}
+	 	}else{
+	 		return 0;
+	 	}
+
+ 	}
+
 
 }
 

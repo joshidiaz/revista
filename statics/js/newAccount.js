@@ -15,7 +15,7 @@ $(document).on('ready', function(){
         $("#specialismName").html(data);
     })
 
-	$('form').on('submit',function(e){
+	$('#account').on('submit',function(e){
 		var request = $('form').attr('action');
 		var method = $('form').attr('method');
 

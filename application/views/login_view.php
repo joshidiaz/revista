@@ -1,4 +1,5 @@
 <body>
+	<script src="<?=base_url();?>statics/js/login.js"></script>
 	<script src="<?=base_url();?>statics/foundation/js/foundation/foundation.topbar.js"></script>
 	<div class="row">
 		<nav class="top-bar" data-topbar>
@@ -32,8 +33,10 @@
 	<div class="row">
 		<div class="large-6 small-6 small-centered large-centered columns spaceTop">
 			<fieldset class="">
-				
-				<form action='<?=base_url();?>index.php/login/verificarUsuario' method='post' name='process' accept-charset="utf-8" enctype="multipart/form-data">
+				<div class="large-12 small-12 columns" id="aviso">
+					
+				</div>
+				<form id="login" action='<?=base_url();?>index.php/login_controller/userAuthenticate' method='post' name='process' accept-charset="utf-8" enctype="multipart/form-data">
 					<div class="row">
 						<div class="large-8 small-10 small-centered large-centered columns">
 						    <input type="text" name="userName" placeholder="Usuario"  autofocus required>
