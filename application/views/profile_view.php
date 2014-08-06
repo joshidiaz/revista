@@ -1,4 +1,5 @@
 <body>
+	<script src="<?=base_url();?>statics/js/profile.js"></script>
 	<div class="row">
 		<div class="large-12 small-12 small-centered large-centered columns">
 			<fieldset class="">
@@ -16,12 +17,12 @@
 						<div class="large-12 small-12 columns">
 							<div class="large-6 small-6 columns">
 								<label>Nombre(s) <b class="aviso"> (*)</b>
-									<input name="name" type="text" />
+									<input id="name" name="name" type="text" disabled="disabled"/>
 								</label>
 							</div>
 							<div class="large-6 small-6 columns">
 								<label>Apellidos <b class="aviso"> (*)</b>
-									<input name="lastName" type="text" />
+									<input id="lastName" name="lastName" type="text" disabled="disabled"/>
 								</label>
 							</div>
 						</div>
@@ -30,12 +31,12 @@
 						<div class="large-12 small-12 columns">
 							<div class="large-6 small-6 columns">
 								<label>Telefono <b class="aviso"> (*)</b>
-									<input name="phone" type="text" />
+									<input id="phone" name="phone" type="text" disabled="disabled"/>
 								</label>
 							</div>
 							<div class="large-6 small-6 columns">
 								<label>Institución o universidad<b class="aviso"> (*)</b>
-									<input name="institution" type="text" />
+									<input id="institution"  name="institution" type="text" disabled="disabled"/>
 								</label>
 							</div>
 						</div>
@@ -44,14 +45,14 @@
 						<div class="large-12 small-12 columns">
 							<div class="large-6 small-6 columns">
 								<label>Correo eléctronico <b class="aviso"> (*)</b>
-									<input  type="text" />
+									<input id="email" type="text" disabled="disabled"/>
 								</label>
 							</div>
-							<div class="large-6 small-6 columns">
+							<!-- <div class="large-6 small-6 columns">
 								<label>Confirmar correo eléctronico<b class="aviso"> (*)</b>
-									<input name="email" type="text" />
+									<input name="email" type="text" disabled="disabled"/>
 								</label>
-							</div>
+							</div> -->
 						</div>
 					</div>
 					<hr>
@@ -59,12 +60,12 @@
 						<div class="large-12 small-12 columns">
 							<div class="large-6 small-6 columns">
 								<label>Nivel académico <b class="aviso"> (*)</b>
-									<input name="academicGrade" type="text" />
+									<input id="academicGrade" name="academicGrade" type="text" disabled="disabled"/>
 								</label>
 							</div>
 							<div class="large-6 small-6 columns">
 								<label>Área de interes <b class="aviso"> (*)</b>
-									<input name="areaInterest" type="text" />
+									<input id="areaInterest" name="areaInterest" type="text" disabled="disabled"/>
 								</label>
 							</div>
 						</div>
@@ -73,12 +74,15 @@
 						<div class="large-12 small-12 columns">
 							<div class="large-6 small-6 columns">
 								<label>Disciplina <b class="aviso"> (*)</b>
-									<input name="disiplineName" type="text" />
+									<select name="iddisipline" name="iddisipline" id="disiplineName" disabled="disabled">
+									</select>
 								</label>
 							</div>
 							<div class="large-6 small-6 columns">
 								<label>Subdisciplina <b class="aviso"> (*)</b>
-									<input name="subdisiplineName" type="text" />
+									<select id="idspecialism" name="idspecialism" id="subdisiplineName" disabled="disabled">
+										
+									</select>
 								</label>
 							</div>
 						</div>
@@ -87,12 +91,14 @@
 						<div class="large-12 small-12 columns">
 							<div class="large-6 small-6 columns">
 								<label>Especialidad <b class="aviso"> (*)</b>
-									<input name="specialismName" type="text" />
+									<select id="idsubDiscipline" name="idsubDiscipline" id="specialismName" disabled="disabled">
+										
+									</select>
 								</label>
 							</div>
 							<div class="large-6 small-6 columns">
 								<label>Nivel en el SNI  <b class="aviso"> (*)</b>
-							        <select>
+							        <select id="sniLevel" name="sniLevel" disabled="disabled">
 							          <option value="1">Nivel 1</option>
 							          <option value="2">Nivel 2</option>
 							          <option value="3">Nivel 3</option>
@@ -108,22 +114,22 @@
 						<div class="large-12 small-12 columns">
 							<div class="large-12 small-12 columns">
 								<label>Títulos de los últimos 5 artículos<b class="aviso"> (*)</b>
-									<textarea name="lastFiveArticles"></textarea>
+									<textarea id="lastFiveArticles" name="lastFiveArticles" disabled="disabled"></textarea>
 								</label>
 							</div>
 							<div class="large-12 small-12 columns">
 								<label>Títulos de los últimos 5 proyectos de investigación<b class="aviso"> (*)</b>
-									<textarea name="lastFiveResearch"></textarea>
+									<textarea id="lastFiveResearch" name="lastFiveResearch" disabled="disabled"></textarea>
 								</label>
 							</div>
 							<div class="large-12 small-12 columns">
 								<label>Información relevante que considere 
-									<textarea name="moreInformation"></textarea>
+									<textarea id="moreInformation" name="moreInformation" disabled="disabled"></textarea>
 								</label>
 							</div>
 						</div>
 					</div>
-					<div class="row">
+					<div class="row" style="display: none;">
 						<div class="large-6 small-6 small-centered large-centered columns">
 							<a href="#" class="button expand">Guardar</a>
 						</div>

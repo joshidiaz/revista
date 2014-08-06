@@ -93,9 +93,26 @@ class Account_model extends CI_Model {
 	 		return 0;
 	 		// echo "No entré";
 	 	}
-
  	}
 
+	public function getAllUserData($iduser)
+ 	{
+ 		$this->db->select('name,lastName,phone,institution,email,academicGrade,areaInterest
+ 			,sniLevel,lastFiveArticles,lastFiveResearch,moreInformation,cv,iddisipline,idspecialism,idsubDiscipline');
+ 		$this->db->from('user');
+ 		$this->db->where('iduser',$iduser);
+ 		$query = $this->db->get();
+ 		if($query->num_rows() > 0){
+
+ 			$userData = $query->result_array();
+ 			$userData = $userData[0];
+
+ 			return $userData;
+
+ 		}else{
+ 			return 0;
+ 		}
+ 	}
 
 }
 
