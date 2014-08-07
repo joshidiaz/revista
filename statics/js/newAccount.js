@@ -2,17 +2,17 @@ $(document).on('ready', function(){
 
     $.post(urlBase+"index.php/account_controller/getDisciplines", {
     }, function(data) {
-        $("#disiplineName").html(data);
+        $("#iddiscipline").html(data);
     })
 
     $.post(urlBase+"index.php/account_controller/getSubdisciplines", {
     }, function(data) {
-        $("#subdisiplineName").html(data);
+        $("#idsubDiscipline").html(data);
     })
 
     $.post(urlBase+"index.php/account_controller/getSpecialisms", {
     }, function(data) {
-        $("#specialismName").html(data);
+        $("#idspecialism").html(data);
     })
 
 	$('#account').on('submit',function(e){

@@ -73,7 +73,7 @@
 							</div>
 							<div class="large-6 small-6 columns">
 								<label>Institución o universidad<b class="aviso"> (*)</b>
-									<input name="institution" type="text" pattern="alpha_numeric" required/>
+									<input name="institution" type="text" required/>
 								</label>
 								<small class="error">La institución es obligatoria.</small>
 							</div>
@@ -106,7 +106,7 @@
 							</div>
 							<div class="large-6 small-6 columns">
 								<label>Área de interés <b class="aviso"> (*)</b>
-									<input name="areaInterest" type="text" pattern="alpha_numeric" required/>
+									<input name="areaInterest" type="text" required/>
 								</label>
 								<small class="error">El área de interés es obligatorio.</small>
 							</div>
@@ -116,7 +116,7 @@
 						<div class="large-12 small-12 columns">
 							<div class="large-6 small-6 columns">
 								<label>Disciplina <b class="aviso"> (*)</b>
-									<select name="iddisipline" id="disiplineName" required>
+									<select name="iddiscipline" id="iddiscipline" required>
 										
 									</select>
 								</label>
@@ -124,7 +124,7 @@
 							</div>
 							<div class="large-6 small-6 columns">
 								<label>Subdisciplina <b class="aviso"> (*)</b>
-									<select name="idspecialism" id="subdisiplineName" required>
+									<select name="idspecialism" id="idspecialism" required>
 										
 									</select>
 								</label>
@@ -136,7 +136,7 @@
 						<div class="large-12 small-12 columns">
 							<div class="large-6 small-6 columns">
 								<label>Especialidad <b class="aviso"> (*)</b>
-									<select name="idsubDiscipline" id="specialismName" required>
+									<select name="idsubDiscipline" id="idsubDiscipline" required>
 										
 									</select>
 								</label>
@@ -162,19 +162,19 @@
 						<div class="large-12 small-12 columns">
 							<div class="large-12 small-12 columns">
 								<label>Títulos de los últimos 5 artículos<b class="aviso"> (*)</b>
-									<textarea name="lastFiveArticles" pattern="alpha_numeric" required></textarea>
+									<textarea name="lastFiveArticles" required></textarea>
 								</label>
 								<small class="error">Este campo es obligatorio.</small>
 							</div>
 							<div class="large-12 small-12 columns">
 								<label>Títulos de los últimos 5 proyectos de investigación<b class="aviso"> (*)</b>
-									<textarea name="lastFiveResearch" pattern="alpha_numeric" required></textarea>
+									<textarea name="lastFiveResearch" required></textarea>
 								</label>
 								<small class="error">Este campo es obligatorio.</small>
 							</div>
 							<div class="large-12 small-12 columns">
 								<label>Información relevante que considere 
-									<textarea name="moreInformation" pattern="alpha_numeric"></textarea>
+									<textarea name="moreInformation"></textarea>
 								</label>
 							</div>
 						</div>

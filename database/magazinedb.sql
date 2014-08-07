@@ -9,6 +9,8 @@ USE `magazinedb` ;
 -- -----------------------------------------------------
 -- Table `magazinedb`.`discipline`
 -- -----------------------------------------------------
+DROP TABLE IF EXISTS `magazinedb`.`discipline` ;
+
 CREATE TABLE IF NOT EXISTS `magazinedb`.`discipline` (
   `iddiscipline` INT NOT NULL AUTO_INCREMENT,
   `disciplineName` VARCHAR(100) NOT NULL,
@@ -22,6 +24,8 @@ COLLATE = utf8_general_ci;
 -- -----------------------------------------------------
 -- Table `magazinedb`.`specialism`
 -- -----------------------------------------------------
+DROP TABLE IF EXISTS `magazinedb`.`specialism` ;
+
 CREATE TABLE IF NOT EXISTS `magazinedb`.`specialism` (
   `idspecialism` INT NOT NULL AUTO_INCREMENT,
   `specialismName` VARCHAR(100) NOT NULL,
@@ -35,6 +39,8 @@ COLLATE = utf8_general_ci;
 -- -----------------------------------------------------
 -- Table `magazinedb`.`subDiscipline`
 -- -----------------------------------------------------
+DROP TABLE IF EXISTS `magazinedb`.`subDiscipline` ;
+
 CREATE TABLE IF NOT EXISTS `magazinedb`.`subDiscipline` (
   `idsubDiscipline` INT NOT NULL AUTO_INCREMENT,
   `subdisciplineName` VARCHAR(100) NOT NULL,
@@ -48,6 +54,8 @@ COLLATE = utf8_general_ci;
 -- -----------------------------------------------------
 -- Table `magazinedb`.`user`
 -- -----------------------------------------------------
+DROP TABLE IF EXISTS `magazinedb`.`user` ;
+
 CREATE TABLE IF NOT EXISTS `magazinedb`.`user` (
   `iduser` INT NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(100) NOT NULL,
@@ -62,7 +70,7 @@ CREATE TABLE IF NOT EXISTS `magazinedb`.`user` (
   `lastFiveResearch` LONGTEXT NOT NULL,
   `moreInformation` LONGTEXT NULL,
   `cv` VARCHAR(100) NOT NULL,
-  `iddisipline` INT NOT NULL,
+  `iddiscipline` INT NOT NULL,
   `idspecialism` INT NOT NULL,
   `idsubDiscipline` INT NOT NULL,
   `userName` VARCHAR(45) NOT NULL,
@@ -70,11 +78,11 @@ CREATE TABLE IF NOT EXISTS `magazinedb`.`user` (
   `status` INT(1) NULL DEFAULT 1 COMMENT '1 : es usuario activo\n0 : es usuario inactivo',
   `rol` INT(1) NULL DEFAULT 1 COMMENT '1 : autor\n2 : arbitro\n3 : editor\n4 : administrador',
   PRIMARY KEY (`iduser`),
-  INDEX `fk_user_discipline_idx` (`iddisipline` ASC),
+  INDEX `fk_user_discipline_idx` (`iddiscipline` ASC),
   INDEX `fk_user_specialism1_idx` (`idspecialism` ASC),
   INDEX `fk_user_subDiscipline1_idx` (`idsubDiscipline` ASC),
   CONSTRAINT `fk_user_discipline`
-    FOREIGN KEY (`iddisipline`)
+    FOREIGN KEY (`iddiscipline`)
     REFERENCES `magazinedb`.`discipline` (`iddiscipline`)
     ON DELETE CASCADE
     ON UPDATE CASCADE,
@@ -96,6 +104,8 @@ COLLATE = utf8_general_ci;
 -- -----------------------------------------------------
 -- Table `magazinedb`.`magazine`
 -- -----------------------------------------------------
+DROP TABLE IF EXISTS `magazinedb`.`magazine` ;
+
 CREATE TABLE IF NOT EXISTS `magazinedb`.`magazine` (
   `idmagazine` INT NOT NULL AUTO_INCREMENT,
   `isbn` VARCHAR(45) NULL,
@@ -108,6 +118,8 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 -- Table `magazinedb`.`article`
 -- -----------------------------------------------------
+DROP TABLE IF EXISTS `magazinedb`.`article` ;
+
 CREATE TABLE IF NOT EXISTS `magazinedb`.`article` (
   `idarticle` INT NOT NULL AUTO_INCREMENT,
   `articleName` TEXT NOT NULL,
@@ -129,6 +141,8 @@ COLLATE = utf8_general_ci;
 -- -----------------------------------------------------
 -- Table `magazinedb`.`catalogue`
 -- -----------------------------------------------------
+DROP TABLE IF EXISTS `magazinedb`.`catalogue` ;
+
 CREATE TABLE IF NOT EXISTS `magazinedb`.`catalogue` (
   `iduser` INT NOT NULL,
   `idarticle` INT NOT NULL,
