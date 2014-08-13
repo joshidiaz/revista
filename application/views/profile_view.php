@@ -1,5 +1,4 @@
 <body>
-	<script src="<?=base_url();?>statics/js/newAccount.js"></script>
 	<script src="<?=base_url();?>statics/js/profile.js"></script>
 	<div class="row">
 		<div class="large-12 small-12 small-centered large-centered columns">
@@ -75,13 +74,13 @@
 						<div class="large-12 small-12 columns">
 							<div class="large-6 small-6 columns">
 								<label>Disciplina <b class="aviso"> (*)</b>
-									<select name="iddiscipline" id="iddiscipline" >
+									<select name="iddiscipline" id="iddiscipline" disabled="disabled">
 									</select>
 								</label>
 							</div>
 							<div class="large-6 small-6 columns">
 								<label>Subdisciplina <b class="aviso"> (*)</b>
-									<select id="idsubDiscipline" name="idsubDiscipline">
+									<select id="idsubDiscipline" name="idsubDiscipline" disabled="disabled">
 										
 									</select>
 									
@@ -93,7 +92,7 @@
 						<div class="large-12 small-12 columns">
 							<div class="large-6 small-6 columns">
 								<label>Especialidad <b class="aviso"> (*)</b>
-									<select name="idspecialism" id="idspecialism" >
+									<select name="idspecialism" id="idspecialism" disabled="disabled">
 										
 									</select>
 								</label>
