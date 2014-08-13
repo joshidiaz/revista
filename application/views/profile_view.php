@@ -4,13 +4,13 @@
 		<div class="large-12 small-12 small-centered large-centered columns">
 			<fieldset class="">
 				<legend>Mi perfil</legend>
-				<form action='' method='post' name='process' accept-charset="utf-8" enctype="multipart/form-data">
+				<form id="profileForm" action='' method='post' name='process' accept-charset="utf-8" enctype="multipart/form-data">
 					<div class="row">
 						<div class="large-6 small-6 columns">
 							<label for="" class="aviso"> Campos obligatorios (*)</label>
 						</div>
 						<div class="large-6 small-6 columns">
-							<a href="#" class="button [tiny small large] right">Editar</a>
+							<a id="editar" class="button [tiny small large] right">Editar</a>
 						</div>
 					</div>
 					<div class="row">
@@ -130,7 +130,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="row" style="display: none;">
+					<div id="bttnSave" class="row" style="display: none;">
 						<div class="large-6 small-6 small-centered large-centered columns">
 							<a href="#" class="button expand">Guardar</a>
 						</div>

@@ -86,5 +86,16 @@ $(document).on('ready', function(){
     	$("#moreInformation").html(userData.moreInformation);
     	// $("#sniLevel").html(userData.sniLevel);
     })
-	
+	$('#editar').on('click',function(){
+        var ids = [];
+            $("#profileForm").find("input").each(function(){ ids.push(this.id); });
+            $("#profileForm").find("textarea").each(function(){ ids.push(this.id); });
+            $("#profileForm").find("select").each(function(){ ids.push(this.id); });
+            // console.log(ids);
+            $.each(ids,function(key,value){
+                $('#'+value).removeAttr('disabled');        
+            });
+            $('#bttnSave').removeAttr('style');
+        // $('#').removeAttr('disabled');
+    })
 })
