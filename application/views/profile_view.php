@@ -4,7 +4,7 @@
 		<div class="large-12 small-12 small-centered large-centered columns">
 			<fieldset class="">
 				<legend>Mi perfil</legend>
-				<form id="profileForm" action='' method='post' name='process' accept-charset="utf-8" enctype="multipart/form-data">
+				<form  id="profileForm" action='' method='post' name='process' accept-charset="utf-8" enctype="multipart/form-data">
 					<div class="row">
 						<div class="large-6 small-6 columns">
 							<label for="" class="aviso"> Campos obligatorios (*)</label>
