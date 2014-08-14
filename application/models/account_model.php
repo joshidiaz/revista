@@ -20,6 +20,12 @@ class Account_model extends CI_Model {
 
 	}
 
+	public function updateUser($userData, $iduser){
+		$this->db->where('iduser', $iduser);
+		$this->db->update('user', $userData);
+		return 1;
+	}
+
 	public function getDisciplines(){
 		$this->db->select('*');
 		$this->db->from('discipline');

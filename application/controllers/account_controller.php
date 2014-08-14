@@ -6,6 +6,7 @@ class Account_controller extends CI_Controller {
 	{
 		parent::__construct();
 		$this->load->helper('url');
+		$this->load->library('session');
 		$this->load->model('account_model');
 		//Do your magic here
 	}
@@ -32,11 +33,9 @@ class Account_controller extends CI_Controller {
 
 	public function updateUser(){
 		$dataUser = $this->input->post();
-
-		echo "<pre>";
-			print_r($dataUser);
-		echo "<pre>";
-
+		$iduser = $this->session->userdata('iduser');
+		$request = $this->account_model->updateUser($dataUser,$iduser);
+		echo($request);
 	}
 
 	public function getDisciplines(){

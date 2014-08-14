@@ -125,7 +125,6 @@
 							<div class="large-6 small-6 columns">
 								<label>Subdisciplina <b class="aviso"> (*)</b>
 									<select name="idspecialism" id="idspecialism" required>
-										
 									</select>
 								</label>
 								<small class="error">La subdisciplina es obligatorio.</small>
@@ -137,7 +136,6 @@
 							<div class="large-6 small-6 columns">
 								<label>Especialidad <b class="aviso"> (*)</b>
 									<select name="idsubDiscipline" id="idsubDiscipline" required>
-										
 									</select>
 								</label>
 								<small class="error">La especialidad es obligatorio.</small>

@@ -106,10 +106,37 @@ $(document).on('ready', function(){
         window.location.replace(urlBase+'index.php/dashboard_controller/getProfile');
     })
 
-    $('#profileForm').on('submit',function(){
+    $('#profileForm').on('submit',function(e){
         var request = $('form').attr('action');
         var method = $('form').attr('method');
 
         e.preventDefault(); 
+
+        var em1 = $('#email').val();
+        var em2 = $('#email2').val();
+        console.log(em1);
+        console.log(em2);
+        if((em1 == em2) && (em1 != "") && (em2 != "")){
+            $.ajax({
+                url: request,
+                type: method,
+                data: $('form').serialize(),
+                success: function(resp) {
+                    $("#aviso").html('<script>alert("Sus cambios han sido realizados con éxito.");</script>');
+                    console.log(resp);
+                    window.location=urlBase+'index.php/dashboard_controller/getProfile';
+                },
+                error: function(jqXHR, status, error){
+                    $("#aviso").html('<script>alert("Algo salió mal con sus cambios, vuelva a intentarlo.");</script>');
+                    console.log(status)
+                    console.log(error)
+                },
+                complete: function(jqXHR, status){
+                    console.log(status)
+                },
+                timeout: 10000
+            })  
+        }
     })
 })
+
