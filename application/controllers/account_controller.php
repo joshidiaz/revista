@@ -30,6 +30,15 @@ class Account_controller extends CI_Controller {
 		}
 	}
 
+	public function updateUser(){
+		$dataUser = $this->input->post();
+
+		echo "<pre>";
+			print_r($dataUser);
+		echo "<pre>";
+
+	}
+
 	public function getDisciplines(){
 		$disciplines=$this->account_model->getDisciplines();
 		echo "<option value=''>Seleccione una disciplina</option>";
@@ -61,8 +70,7 @@ class Account_controller extends CI_Controller {
 		$userName = $first.$date.$number;
 		return strtoupper($userName);
 		
-	} 
-
+	}
 
 	private function generatePassword($length=8,$uc=TRUE,$n=TRUE){
 	    $source = 'abcdefghijklmnopqrstuvwxyz';
@@ -80,6 +88,8 @@ class Account_controller extends CI_Controller {
 	    }
 	    return $rstr;
 	}
+
+
 }
 
 /* End of file account_controller.php */

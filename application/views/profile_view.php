@@ -9,8 +9,9 @@
 						<div class="large-6 small-6 columns">
 							<label for="" class="aviso"> Campos obligatorios (*)</label>
 						</div>
-						<div class="large-6 small-6 columns">
-							<a id="editar" class="button [tiny small large] right">Editar</a>
+						<div id="actionBttn" class="large-6 small-6 columns">
+							<a id="edit" class="button [tiny small large] right">Editar</a>
+							<a id="cancel" style="display: none;" class="button [tiny small large] right">Cancelar</a>
 						</div>
 					</div>
 					<div class="row">
@@ -48,11 +49,11 @@
 									<input id="email" type="text" disabled="disabled"/>
 								</label>
 							</div>
-							<!-- <div class="large-6 small-6 columns">
+							<div id="vEmail" style="display: none;" class="large-6 small-6 columns">
 								<label>Confirmar correo eléctronico<b class="aviso"> (*)</b>
-									<input name="email" type="text" disabled="disabled"/>
+									<input name="email" type="text"/>
 								</label>
-							</div> -->
+							</div>
 						</div>
 					</div>
 					<hr>
@@ -132,7 +133,7 @@
 					</div>
 					<div id="bttnSave" class="row" style="display: none;">
 						<div class="large-6 small-6 small-centered large-centered columns">
-							<a href="#" class="button expand">Guardar</a>
+							<a href="#" class="button expand">Guardar cambios</a>
 						</div>
 					</div>
 				</form>

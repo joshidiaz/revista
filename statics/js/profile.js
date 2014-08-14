@@ -86,7 +86,7 @@ $(document).on('ready', function(){
     	$("#moreInformation").html(userData.moreInformation);
     	// $("#sniLevel").html(userData.sniLevel);
     })
-	$('#editar').on('click',function(){
+	$('#edit').on('click',function(){
         var ids = [];
             $("#profileForm").find("input").each(function(){ ids.push(this.id); });
             $("#profileForm").find("textarea").each(function(){ ids.push(this.id); });
@@ -95,7 +95,21 @@ $(document).on('ready', function(){
             $.each(ids,function(key,value){
                 $('#'+value).removeAttr('disabled');        
             });
+
             $('#bttnSave').removeAttr('style');
-        // $('#').removeAttr('disabled');
+            $('#vEmail').removeAttr('style');
+            $('#edit').hide();
+            $('#cancel').removeAttr('style');
+    })
+
+    $('#cancel').on('click',function(){
+        window.location.replace(urlBase+'index.php/dashboard_controller/getProfile');
+    })
+
+    $('#profileForm').on('submit',function(){
+        var request = $('form').attr('action');
+        var method = $('form').attr('method');
+
+        e.preventDefault(); 
     })
 })
