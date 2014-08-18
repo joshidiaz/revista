@@ -6,7 +6,7 @@ class Account_controller extends CI_Controller {
 	{
 		parent::__construct();
 		$this->load->helper('url');
-		$this->load->library('session');
+		$this->load->library(array('session','email'));
 		$this->load->model('account_model');
 		//Do your magic here
 	}
@@ -24,8 +24,8 @@ class Account_controller extends CI_Controller {
 			$password = $this->generatePassword(8, TRUE, TRUE);
 			$userData['userName'] = $userName;
 			$userData['password'] = $password;
-			$idUser = $this->account_model->setUser($userData);
-			echo "correcto";
+			$iduser = $this->account_model->setUser($userData);
+			echo $iduser;
 		}else{ 
 			echo "Incorrecto";
 		}
@@ -36,6 +36,72 @@ class Account_controller extends CI_Controller {
 		$iduser = $this->session->userdata('iduser');
 		$request = $this->account_model->updateUser($dataUser,$iduser);
 		echo($request);
+	}
+
+	public function sendConfirmation(){
+		$this->load->view('head_view', FALSE);
+		$this->load->view('confirmation_view', FALSE);
+	}
+
+	public function sendEmail(){
+		$iduser = $this->input->post('iduser');
+		$userData = $this->account_model->getAllUserData($iduser);
+		$credentials = $this->account_model->getCredentials($iduser);
+		//Configuración para mandar el correo
+		// $config['protocol'] = 'mail';
+		//$config['wordwrap'] = FALSE;				
+		//$config['mailtype']='html';
+		
+		$config['protocol'] = 'smtp';
+		$config['smtp_host'] = 'ssl://smtp.googlemail.com';
+		$config['smtp_port'] = '465';
+		$config['smtp_user'] = 'magazineci3m@gmail.com';
+		$config['smtp_pass'] = 'qwerty1010';
+
+		$config['smtp_timeout'] = '7';
+		$config['charset']    = 'utf-8';
+		$config['newline']    = "\r\n";
+		$config['mailtype'] = 'html'; // or html
+		$config['validation'] = TRUE; // bool whether to validate email or not
+		
+		
+		$this->email->initialize($config);
+		$this->email->from('magazineci3m@gmail.com', 'CI3M');
+		$this->email->to($userData['email']);
+		$this->email->subject('Gracias por registrarse');
+		$msj = '<html>
+					<head>
+					    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+					    
+					</head>
+					<body>
+						<table width="100%" style="background-image:url('.base_url().'statics/img/image2.jpeg);">
+						<tr>
+						<br><br><br><br><br><br><br><br><br><br><br><br>
+						</tr>
+						<tr>
+						Su usuario es '.$credentials['userName'].'<br><br>
+						Su contraseña es '.$credentials['password'].'<br><br>
+
+
+						A T E N T A M E N T E<br><br>
+
+						<br>
+						<br>
+						Universidad Autonoma Metropolitana Unidad Iztapalapa<br>
+						<i>Casa abierta al tiempo</i>
+						</tr>
+						</table>				
+						
+					</body>
+				</html>';
+		
+		$this->email->message($msj);		
+		if(!($this->email->send()))
+		{
+		   show_error($this->email->print_debugger());
+		}
+		echo "enviado";
 	}
 
 	public function getDisciplines(){

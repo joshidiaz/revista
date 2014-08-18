@@ -1,4 +1,8 @@
 <body>
+	<script type="text/javascript">
+		if(window.history.forward(1) != null)
+			window.history.forward(1);
+	</script>
 	<script src="<?=base_url();?>statics/js/login.js"></script>
 	<script src="<?=base_url();?>statics/foundation/js/foundation/foundation.topbar.js"></script>
 	<div class="row">

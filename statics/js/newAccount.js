@@ -33,7 +33,13 @@ $(document).on('ready', function(){
 				success: function(resp) {
 					$("#aviso").html('<script>alert("Su registro a sido realizado con éxito.");</script>');
 					console.log(resp);
-					window.location = urlBase+"index.php/login_controller";
+
+					$.post(urlBase+"index.php/account_controller/sendEmail", {
+						iduser:resp
+					}, function(data) {
+						console.log(data);
+					    window.location = urlBase+"index.php/account_controller/sendConfirmation";
+					})
 				},
 				error: function(jqXHR, status, error){
 					$("#aviso").html('<script>alert("Algo salió mal con su registro vuelva a intentarlo.");</script>');

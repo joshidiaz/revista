@@ -7,16 +7,12 @@ class Account_model extends CI_Model {
 		$this->load->database();
 	}
 
-	public function setUser($data){
-		// echo "<pre>";
-		// 	print_r($data);
-		// echo "</pre>";
-		
+	public function setUser($data){		
 		$this->db->insert('user', $data);
-		// $this->db->select_max('iduser');
-		// $consulta=$this->db->get('user');
-		// $aux=$consulta->result_array();
-		// return ($aux[0]['iduser']);
+		$this->db->select_max('iduser');
+		$consulta=$this->db->get('user');
+		$aux=$consulta->result_array();
+		return ($aux[0]['iduser']);
 
 	}
 
@@ -24,6 +20,23 @@ class Account_model extends CI_Model {
 		$this->db->where('iduser', $iduser);
 		$this->db->update('user', $userData);
 		return 1;
+	}
+
+	public function getCredentials($iduser){
+		$this->db->select('userName, password');
+ 		$this->db->from('user');
+ 		$this->db->where('iduser',$iduser);
+ 		$query = $this->db->get();
+ 		if($query->num_rows() > 0){
+
+ 			$credentials = $query->result_array();
+ 			$credentials = $credentials[0];
+
+ 			return $credentials;
+
+ 		}else{
+ 			return 0;
+ 		}
 	}
 
 	public function getDisciplines(){
