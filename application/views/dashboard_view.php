@@ -67,8 +67,7 @@
 						<div class="content" id="panel2a">
 							<div class="row">
 								<div id="" class="large-12 columns">
-									Contenido Tab Artículos
-									<!-- <iframe name="datos2" width="100%" height="1000px" scrolling="no" id="datos2" frameborder="0"></iframe> -->
+									<iframe name="datos2" width="100%" height="1000px" scrolling="no" id="datos2" frameborder="0" src="<?=base_url();?>index.php/dashboard_controller/getEditor"></iframe>
 								</div>
 							</div>
 						</div>
