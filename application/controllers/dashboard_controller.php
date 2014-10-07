@@ -43,7 +43,13 @@ class Dashboard_controller extends CI_Controller {
 		$this->load->view('head_view', NULL, FALSE);
 		$this->load->view('editor_view', NULL, FALSE);
 	}
-}
+
+	public function getArtsListAutor(){
+
+		$this->load->view('head_view', NULL, FALSE);
+		$this->load->view('artsListAutor_view', NULL, FALSE);
+	}
+	}
 
 /* End of file dashboard_controller.php */
 /* Location: ./application/controllers/dashboard_controller.php */

@@ -67,7 +67,7 @@
 						<div class="content" id="panel2a">
 							<div class="row">
 								<div id="" class="large-12 columns">
-									<iframe name="datos2" width="100%" height="1000px" scrolling="no" id="datos2" frameborder="0" src="<?=base_url();?>index.php/dashboard_controller/getEditor"></iframe>
+									<iframe name="datos2" width="100%" height="1000px" scrolling="no" id="datos2" frameborder="0" src="<?=base_url();?>index.php/dashboard_controller/getArtsListAutor"></iframe>
 								</div>
 							</div>
 						</div>
