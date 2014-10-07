@@ -22,6 +22,11 @@ class Dashboard_controller extends CI_Controller {
 
 	public function getEditor() 
 	{
+		/*Referencias:
+			https://duckduckgo.com/?q=ckeditor+in+codeigniter
+			http://stackoverflow.com/questions/11814937/ckeditor-in-codeigniter#11815046
+		*/
+
 		$this->load->library('ckeditor');
 		$this->load->library('ckfinder');
 
