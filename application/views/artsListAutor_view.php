@@ -1,3 +1,4 @@
+
 <body>
 	<script type="text/javascript" src="<?=base_url();?>statics/articles.js"></script>
 	<div class="row">
