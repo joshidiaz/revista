@@ -20,11 +20,11 @@ class Account_controller extends CI_Controller {
 		$userData=$this->input->post();
 		if (isset($userData) && !empty($userData) && !empty($userData['email']) ) {
 
-			$userName = $this->generateUser($userData['name'],$userData['lastName']);
-			$password = $this->generatePassword(8, TRUE, TRUE);
+			$userName             = $this->generateUser($userData['name'],$userData['lastName']);
+			$password             = $this->generatePassword(8, TRUE, TRUE);
 			$userData['userName'] = $userName;
 			$userData['password'] = $password;
-			$iduser = $this->account_model->setUser($userData);
+			$iduser               = $this->account_model->setUser($userData);
 			echo $iduser;
 		}else{ 
 			echo "Incorrecto";
@@ -33,8 +33,8 @@ class Account_controller extends CI_Controller {
 
 	public function updateUser(){
 		$dataUser = $this->input->post();
-		$iduser = $this->session->userdata('iduser');
-		$request = $this->account_model->updateUser($dataUser,$iduser);
+		$iduser   = $this->session->userdata('iduser');
+		$request  = $this->account_model->updateUser($dataUser,$iduser);
 		echo($request);
 	}
 
@@ -52,17 +52,17 @@ class Account_controller extends CI_Controller {
 		//$config['wordwrap'] = FALSE;				
 		//$config['mailtype']='html';
 		
-		$config['protocol'] = 'smtp';
-		$config['smtp_host'] = 'ssl://smtp.googlemail.com';
-		$config['smtp_port'] = '465';
-		$config['smtp_user'] = 'magazineci3m@gmail.com';
-		$config['smtp_pass'] = 'qwerty1010';
-
+		$config['protocol']     = 'smtp';
+		$config['smtp_host']    = 'ssl://smtp.googlemail.com';
+		$config['smtp_port']    = '465';
+		$config['smtp_user']    = 'magazineci3m@gmail.com';
+		$config['smtp_pass']    = 'qwerty1010';
+		
 		$config['smtp_timeout'] = '7';
-		$config['charset']    = 'utf-8';
-		$config['newline']    = "\r\n";
-		$config['mailtype'] = 'html'; // or html
-		$config['validation'] = TRUE; // bool whether to validate email or not
+		$config['charset']      = 'utf-8';
+		$config['newline']      = "\r\n";
+		$config['mailtype']     = 'html'; // or html
+		$config['validation']   = TRUE; // bool whether to validate email or not
 		
 		
 		$this->email->initialize($config);

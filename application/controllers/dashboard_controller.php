@@ -33,7 +33,8 @@ class Dashboard_controller extends CI_Controller {
 
 
 		$this->ckeditor->basePath = base_url().'asset/ckeditor/';
-		$this->ckeditor->config['toolbar'] = array(array( 'Source', '-', 'Bold', 'Italic', 'Underline', '-','Cut','Copy','Paste','PasteText','PasteFromWord','-','Undo','Redo','-','NumberedList','BulletedList' ));
+		//$this->ckeditor->config['toolbar'] = array(array( 'Source', '-', 'Bold', 'Italic', 'Underline', '-','Cut','Copy','Paste','PasteText','PasteFromWord','-','Undo','Redo','-','NumberedList','BulletedList' ));
+		$this->ckeditor->config['toolbar'] = null;
 		$this->ckeditor->config['language'] = 'es';
 		$this->ckeditor->config['width'] = '100%';
 		$this->ckeditor->config['height'] = '300px';            
