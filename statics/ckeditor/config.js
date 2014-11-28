@@ -4,6 +4,7 @@
  */
 
 CKEDITOR.editorConfig = function( config ) {
+
 	// Define changes to default configuration here.
 	// For complete reference see:
 	// http://docs.ckeditor.com/#!/api/CKEDITOR.config
@@ -58,12 +59,12 @@ CKEDITOR.editorConfig = function( config ) {
 	config.removeDialogTabs = 'image:advanced;link:advanced';
 
 	// Aqui van la implementacion de kcFinder 
-	config.filebrowserBrowseUrl = '/kcfinder/browse.php?opener=ckeditor&type=files';
-  	config.filebrowserImageBrowseUrl = '/kcfinder/browse.php?opener=ckeditor&type=images';
-  	config.filebrowserFlashBrowseUrl = '/kcfinder/browse.php?opener=ckeditor&type=flash';
-  	config.filebrowserUploadUrl = '/kcfinder/upload.php?opener=ckeditor&type=files';
-  	config.filebrowserImageUploadUrl = '/kcfinder/upload.php?opener=ckeditor&type=images';
-  	config.filebrowserFlashUploadUrl = '/kcfinder/upload.php?opener=ckeditor&type=flash';
+	config.filebrowserBrowseUrl = 'http://localhost/revista/statics/ckeditor/kcfinder/browse.php?opener=ckeditor&type=files';
+  	config.filebrowserImageBrowseUrl = 'http://localhost/revista/statics/ckeditor/kcfinder/browse.php?opener=ckeditor&type=images';
+  	config.filebrowserFlashBrowseUrl = 'http://localhost/revista/statics/ckeditor/kcfinder/browse.php?opener=ckeditor&type=flash';
+  	config.filebrowserUploadUrl = 'http://localhost/revista/statics/ckeditor/kcfinder/upload.php?opener=ckeditor&type=files';
+  	config.filebrowserImageUploadUrl = 'http://localhost/revista/statics/ckeditor/kcfinder/upload.php?opener=ckeditor&type=images';
+  	config.filebrowserFlashUploadUrl = 'http://localhost/revista/statics/ckeditor/kcfinder/upload.php?opener=ckeditor&type=flash';
   	config.toolbarCanCollapse = true;
 	config.toolbarStartupExpanded = false;
 };

@@ -27,13 +27,15 @@ class Autor_controller extends CI_Controller {
  				</tr>
 			</thead>';
 		echo '<tbody>';
-		foreach ($articles as $article ) {
-			echo'<tr> 
-					<td><a href="'.base_url().'index.php/autor_controller/getArticle/'.$article['idarticle'].'" title="">'.$article['articleName'].'</a></td>
-					<td>'.$article['review1'].'</td>
-					<td>'.$article['review2'].'</td>
-					<td>'.$article['status'].'</td>
-				</tr>';
+		if (isset($articles) && !empty($articles)) {
+			foreach ($articles as $article ) {
+				echo'<tr> 
+						<td><a href="'.base_url().'index.php/autor_controller/getArticle/'.$article['idarticle'].'" title="">'.$article['articleName'].'</a></td>
+						<td>'.$article['review1'].'</td>
+						<td>'.$article['review2'].'</td>
+						<td>'.$article['status'].'</td>
+					</tr>';
+			}
 		}
 		echo '</tbody>';
 		echo '</table>';
