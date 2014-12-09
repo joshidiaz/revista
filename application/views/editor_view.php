@@ -1,6 +1,6 @@
 <body>
 	<script type="text/javascript" src="<?=base_url();?>statics/ckeditor/ckeditor.js"></script>
-	<script type="text/javascript" src="<?=base_url();?>statics/ckfinder.js"></script>
+	<!--<script type="text/javascript" src="<?=base_url();?>statics/ckfinder.js"></script>-->
 	
 	<form action="<?=base_url();?>index.php/article_controller/setArticleAutor" method="post">
 		<!-- ACA VA EL INPUT -->
@@ -10,6 +10,7 @@
 			</label>
 		</div>
 		<div class="large-12 small-12 columns topSpace10">
+			
 			<?php 
 				echo $this->ckeditor->editor("articleBody","Escribe algo...");
 			?>
