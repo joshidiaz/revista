@@ -30,6 +30,13 @@ class Article_model extends CI_Model {
 		return 1;
     }
 
+    public function sendArticle($idarticle){
+    	$dataArticle = array('status' => 2);
+    	$this->db->where('idarticle', $idarticle);
+    	$this->db->update('article',$dataArticle);
+    	return 1;
+    }
+
 }
 
 /* End of file article_model.php */

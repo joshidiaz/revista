@@ -1,6 +1,6 @@
 <body>
 	<script type="text/javascript" src="<?=base_url();?>statics/ckeditor/ckeditor.js"></script>
-	<!--<script type="text/javascript" src="<?=base_url();?>statics/ckfinder.js"></script>-->
+	<script type="text/javascript" src="<?=base_url();?>statics/js/articles.js"></script>
 	
 	<form action="<?=base_url();?>index.php/article_controller/setArticleAutor" method="post">
 		<!-- ACA VA EL INPUT -->
@@ -24,7 +24,7 @@
 				<input type="submit" value="Guardar" class="button  [tiny small large] ">	
 			</div>
 			<div class="large-3 small-3 columns">
-				<a href="<?=base_url();?>index.php/dashboard_controller/getEditor" target="datos2" class="button  [tiny small large] ">Enviar</a>	
+				<a id="sendArticle" href="#" class="button [tiny small large]">Enviar</a>
 			</div>
 		</div>
 	</form>

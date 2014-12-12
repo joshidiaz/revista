@@ -71,6 +71,11 @@ class Autor_controller extends CI_Controller {
 
 	}
 
+	public function sendArticle(){
+		$idarticle = $this->input->post();
+		$this->article_model->sendArticle($idarticle);
+	}
+
 }
 
 /* End of file autor_controller.php */
