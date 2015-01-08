@@ -13,9 +13,23 @@ $(document).on('ready', function(){
 				if(resp == 'incorrecto'){
 					$("#aviso").html('<div data-alert class="alert-box warning">El usuario y/o contraseña que proporcionó son incorrectos, por favor verifique los datos e intente de nuevo.<a href="#" class="close">&times;</a> </div>');					
 				}else{
-					window.location = urlBase+"index.php/dashboard_controller";
+					console.log (resp);
+					switch(resp){
+						case '1': 
+							window.location = urlBase+"index.php/dashboard_controller"; 
+							break;
+						case '2': 
+							window.location = urlBase+"index.php/dashboard_controller";
+							break;
+						case '3': 
+							window.location = urlBase+"index.php/dashboardEditor_controller";
+							break;
+						case '4':
+							//window.location = urlBase+"index.php/dashboard_controller";
+							break;	
+					}
 				}
-				console.log(resp);
+				
 			},
 			error: function(jqXHR, status, error){
 				$("#aviso").html('<div data-alert class="alert-box warning">Algo salió mal, por favor intente de nuevo.<a href="#" class="close">&times;</a> </div>');

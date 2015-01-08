@@ -117,7 +117,7 @@ class Account_model extends CI_Model {
 	public function getAllUserData($iduser)
  	{
  		$this->db->select('name,lastName,phone,institution,email,academicGrade,areaInterest
- 			,sniLevel,lastFiveArticles,lastFiveResearch,moreInformation,cv,iddiscipline,idspecialism,idsubDiscipline');
+ 			,sniLevel,lastFiveArticles,lastFiveResearch,moreInformation,cv,iddiscipline,idspecialism,idsubDiscipline,rol');
  		$this->db->from('user');
  		$this->db->where('iduser',$iduser);
  		$query = $this->db->get();

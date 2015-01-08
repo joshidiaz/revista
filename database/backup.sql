@@ -35,7 +35,7 @@ CREATE TABLE `article` (
   PRIMARY KEY (`idarticle`),
   KEY `fk_article_magazine1_idx` (`idmagazine`),
   CONSTRAINT `fk_article_magazine1` FOREIGN KEY (`idmagazine`) REFERENCES `magazine` (`idmagazine`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -44,6 +44,7 @@ CREATE TABLE `article` (
 
 LOCK TABLES `article` WRITE;
 /*!40000 ALTER TABLE `article` DISABLE KEYS */;
+INSERT INTO `article` VALUES (1,'lalala','<p>Escribe algo...dsfdsfdsfdsfdsf</p>\n',2,NULL,NULL,NULL),(2,'fgfgf','<p>Escribe algo...gfgfgf</p>\n',2,NULL,NULL,NULL);
 /*!40000 ALTER TABLE `article` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -63,7 +64,7 @@ CREATE TABLE `article_has_user` (
   KEY `fk_article_has_user_article1_idx` (`article_idarticle`),
   CONSTRAINT `fk_article_has_user_article1` FOREIGN KEY (`article_idarticle`) REFERENCES `article` (`idarticle`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT `fk_article_has_user_user1` FOREIGN KEY (`user_iduser`) REFERENCES `user` (`iduser`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -72,6 +73,7 @@ CREATE TABLE `article_has_user` (
 
 LOCK TABLES `article_has_user` WRITE;
 /*!40000 ALTER TABLE `article_has_user` DISABLE KEYS */;
+INSERT INTO `article_has_user` VALUES (1,2,1),(2,2,2);
 /*!40000 ALTER TABLE `article_has_user` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -238,7 +240,7 @@ CREATE TABLE `user` (
   CONSTRAINT `fk_user_discipline` FOREIGN KEY (`iddiscipline`) REFERENCES `discipline` (`iddiscipline`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `fk_user_specialism1` FOREIGN KEY (`idspecialism`) REFERENCES `specialism` (`idspecialism`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `fk_user_subDiscipline1` FOREIGN KEY (`idsubDiscipline`) REFERENCES `subDiscipline` (`idsubDiscipline`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -247,7 +249,7 @@ CREATE TABLE `user` (
 
 LOCK TABLES `user` WRITE;
 /*!40000 ALTER TABLE `user` DISABLE KEYS */;
-INSERT INTO `user` VALUES (1,'josh','diaz','56565656','uam','joshi.d.h.yd@gmail.com','lalala','dasdaeewq','3','dsadsad','sadsadas','sadas','',1,1,2,'JDWED14847','1234',1,1);
+INSERT INTO `user` VALUES (1,'josh','diaz','56565656','uam','joshi.d.h.yd@gmail.com','lalala','dasdaeewq','3','dsadsad','sadsadas','sadas','',1,1,2,'JDWED14847','1234',1,3),(2,'julio','adadas','545454','uami','brass@gmail.com','feder','ks','1','super ks','feder','','',1,1,1,'JATHU15427','1234',1,1);
 /*!40000 ALTER TABLE `user` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -260,4 +262,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2014-11-12 16:16:31
+-- Dump completed on 2015-01-08 17:13:44

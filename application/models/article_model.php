@@ -37,6 +37,23 @@ class Article_model extends CI_Model {
     	return 1;
     }
 
+    public function getArtsList(){
+    	$this->db->select('*');
+    	$this->db->from('article');
+    	$this->db->where('status',2);
+    	$this->db->order_by('articleName','desc');
+    	$query=$this->db->get();
+		if ($query->num_rows()>0) {
+			$articles=$query->result_array();
+			return $articles;
+		}else{
+			return 0 ;
+		}
+
+    }
+
+
+
 }
 
 /* End of file article_model.php */
