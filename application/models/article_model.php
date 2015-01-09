@@ -29,7 +29,7 @@ class Article_model extends CI_Model {
 		$this->db->update('article', $dataArticle);
 		return 1;
     }
-
+    
     public function sendArticle($idarticle){
     	$dataArticle = array('status' => 2);
     	$this->db->update('article',$dataArticle);
