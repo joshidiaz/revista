@@ -1,17 +1,18 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Dashboard_controller extends CI_Controller {
+class DashboardEditor_controller extends CI_Controller {
 
 	public function __construct()
 	{
 		parent::__construct();
 		$this->load->helper('url');
+		$this->load->model(array('article_model'));
 	}
 
 	public function index()
 	{
 		$this->load->view('head_view', NULL, FALSE);
-		$this->load->view('dashboard_view', NULL, FALSE);
+		$this->load->view('dashboardEditor_view', NULL, FALSE);
 	}
 
 	public function getProfile() 
@@ -50,6 +51,17 @@ class Dashboard_controller extends CI_Controller {
 		$this->load->view('head_view', NULL, FALSE);
 		$this->load->view('artsListAutor_view', NULL, FALSE);
 	}
+
+	public function getArtsList(){
+
+		$articles=$this->article_model->getArtsList();
+		echo "<pre>";
+			print_r($articles);
+		echo "</pre>";
+		
+	}
+
+	
 
 }
 

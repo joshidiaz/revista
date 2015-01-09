@@ -19,18 +19,19 @@ class Login_controller extends CI_Controller {
 	public function userAuthenticate(){
 		$userData = $this->input->post();
 		$iduser = $this->account_model->userAuthenticate($userData);
-
+		$allUserData = $this->account_model->getAllUserData($iduser);
 		if($iduser != 0){
 			$newData = array(
 				'userName' => $userData['userName'],
 				'password' => $userData['password'],
 				'iduser' => $iduser,
+				'rol' => $allUserData['rol'],
 				'logged_in' => TRUE
   			);
  	 		$this->session->set_userdata($newData);
  	 		$_SESSION = $this->session->all_userdata(); 
  	 		if(!empty($_SESSION['userName'])){
- 				echo 'correcto';
+ 				echo $allUserData['rol'];
  			} 
  		} else {
  			$this->session->sess_destroy();
