@@ -24,7 +24,7 @@
 				<input type="submit" value="Guardar" class="button  [tiny small large] ">	
 			</div>
 			<div class="large-3 small-3 columns">
-				<a id="sendArticle" href="#" class="button [tiny small large]">Enviar</a>	
+				<a id="sendArticle" class="button [tiny small large]">Enviar</a>	
 			</div>
 		</div>
 	</form>

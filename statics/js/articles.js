@@ -12,6 +12,7 @@ $(document).on('ready', function(){
 		$.post(urlBase+"index.php/autor_controller/sendArticle", {
 			idarticle : idarticle
 		}, function(data) {
+			// console.log (data);
 			// $('#userArticles').html(data);
 			window.location = urlBase+"index.php/dashboard_controller/getArtsListAutor";
 		})

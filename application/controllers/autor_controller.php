@@ -73,8 +73,8 @@ class Autor_controller extends CI_Controller {
 	}
 
 	public function sendArticle(){
-		$idarticle = $this->input->post();
-		$this->article_model->sendArticle($idarticle);
+		$idarticle = $this->input->post('idarticle');
+		echo $this->article_model->sendArticle($idarticle);
 	}
 
 }
