@@ -1,7 +1,7 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
 class Autor_controller extends CI_Controller {
-
+	
 	public function __construct()
 	{
 		parent::__construct();
@@ -9,6 +9,7 @@ class Autor_controller extends CI_Controller {
 		$this->load->library('session');
 		$this->load->model(array('autor_model','article_model'));
 	}
+
 	/**
 	 * [getArticlesUser description]
 	 * @return [type]
@@ -64,7 +65,6 @@ class Autor_controller extends CI_Controller {
 		$this->load->view('head_view', NULL, FALSE);
 		$this->load->view('editArticle_view.php', $data, FALSE);
 	}
-
 	public function updateArticle($idarticle){
 		$dataArticle=$this->input->post();
 		$this->article_model->updateArticle($idarticle, $dataArticle);

@@ -32,8 +32,8 @@ class Article_model extends CI_Model {
     
     public function sendArticle($idarticle){
     	$dataArticle = array('status' => 2);
-    	$this->db->where('idarticle', $idarticle);
     	$this->db->update('article',$dataArticle);
+    	$this->db->where('idarticle', $idarticle);
     	return 1;
     }
 
