@@ -9,6 +9,10 @@ class Article_controller extends CI_Controller {
 		$this->load->library('session');
 		$this->load->model('article_model');
 	}
+
+	/**
+	 * [setArticleAutor description]
+	 */
 	public function setArticleAutor()
 	{
 		//obtener el id autor

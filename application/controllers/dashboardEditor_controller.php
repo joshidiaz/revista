@@ -20,7 +20,10 @@ class DashboardEditor_controller extends CI_Controller {
 		$this->load->view('head_view', NULL, FALSE);
 		$this->load->view('profile_view', NULL, FALSE);
 	}
-
+	/**
+	 * [getEditor description]
+	 * @return [type]
+	 */
 	public function getEditor() 
 	{
 		/*Referencias:
@@ -45,19 +48,22 @@ class DashboardEditor_controller extends CI_Controller {
 		$this->load->view('head_view', NULL, FALSE);
 		$this->load->view('editor_view', NULL, FALSE);
 	}
-
+	/**
+	 * [getArtsListAutor description]
+	 * @return [type]
+	 */
 	public function getArtsListAutor(){
 
 		$this->load->view('head_view', NULL, FALSE);
 		$this->load->view('artsListAutor_view', NULL, FALSE);
 	}
-
+	/**
+	 * [getArtsList description]
+	 * @return [type]
+	 */
 	public function getArtsList(){
 		$this->load->view('head_view', NULL, FALSE);
-		$this->load->view('artsListEditor_view', NULL, FALSE);
-
-		
-		
+		$this->load->view('artsListEditor_view', NULL, FALSE);	
 	}
 
 	
