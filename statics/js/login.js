@@ -42,4 +42,11 @@ $(document).on('ready', function(){
 			timeout: 1000
 		})	
 	})
+	
+	$('#logOut').on('click',function(){
+		$.post(urlBase+"index.php/login_controller/rebootSession",{},
+			function(data){
+				window.location = urlBase+"index.php/login_controller";
+			})
+	})
 })

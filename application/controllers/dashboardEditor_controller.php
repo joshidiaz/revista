@@ -53,11 +53,10 @@ class DashboardEditor_controller extends CI_Controller {
 	}
 
 	public function getArtsList(){
+		$this->load->view('head_view', NULL, FALSE);
+		$this->load->view('artsListEditor_view', NULL, FALSE);
 
-		$articles=$this->article_model->getArtsList();
-		echo "<pre>";
-			print_r($articles);
-		echo "</pre>";
+		
 		
 	}
 

@@ -3,6 +3,7 @@
 	<script src="<?=base_url();?>statics/foundation/js/foundation/foundation.tab.js"></script>
 	<script src="<?=base_url();?>statics/foundation/js/foundation/foundation.abide.js"></script>
 	<script src="<?=base_url();?>statics/foundation/js/foundation/foundation.topbar.js"></script>
+	<script src="<?=base_url();?>statics/js/login.js"></script>
 
 	<div class="row">
 		<nav class="top-bar" data-topbar>
@@ -22,7 +23,7 @@
 					<li class="has-dropdown"> 
 						<a href="#">Right Button Dropdown</a> 
 						<ul class="dropdown"> 
-							<li><a href="#">First link in dropdown</a></li> 
+							<li><a href="#"id="logOut">Cerrar sesión</a></li> 
 						</ul> 
 					</li> 
 				</ul> 
