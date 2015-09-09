@@ -1,0 +1,20 @@
+<?php
+error_reporting(0);
+$dir = 'C:\Users\USUARIO\Documents';
+
+// Abrir un directorio conocido, y proceder a leer sus contenidos
+if (is_dir($dir)) {
+   if ($gd = opendir($dir)) {
+       while (($archivo = readdir($gd)) !== false) {
+           echo "<br>"."nombre de archivo: $archivo : tipo de archivo: " . filetype($dir . $archivo) . "\n";
+       }
+       closedir($gd);
+   }
+}
+
+/*
+       var_dump(is_dir("C:\Users\crodriguez\Documents"));
+       var_dump(is_dir("C:\Users\crodriguez\Documents\beatriz"));        
+       var_dump(is_dir('..')); //un directorio arriba
+*/
+?>

@@ -18,29 +18,13 @@ class Autor_controller extends CI_Controller {
 	{
 		$iduser   =$this->session->userdata('iduser');
 		$articles =$this->autor_model->getArticlesUser($iduser);
-		echo '<table>';
-		echo '<thead>
- 				<tr>  
- 					<th>Nombre del artículo</th>
- 					<th>Revisión 1</th>
- 					<th>Revisión 2</th>
- 					<th>Estado</th>
- 				</tr>
-			</thead>';
-		echo '<tbody>';
-		if (isset($articles) && !empty($articles)) {
-			foreach ($articles as $article ) {
-				$status = ($article['status'] == 1) ? 'Borrador' : 'Enviado para revisión' ;
-				echo'<tr> 
-						<td><a href="'.base_url().'index.php/autor_controller/getArticle/'.$article['idarticle'].'">'.$article['articleName'].'</a></td>
-						<td>'.$article['review1'].'</td>
-						<td>'.$article['review2'].'</td>
-						<td>'.$status.'</td>
-					</tr>';
-			}
-		}
-		echo '</tbody>';
-		echo '</table>';
+		echo json_encode($articles);
+		// if (isset($articles) && !empty($articles)) {
+		// 	foreach ($articles as $article ) {
+		// 		$status = ($article['status'] == 1) ? 'Borrador' : 'Enviado para revisión' ;
+		// 		echo'<tr><td><a href="'.base_url().'index.php/autor_controller/getArticle/'.$article['idarticle'].'">'.$article['articleName'].'</a></td><td>'.$article['review1'].'</td><td>'.$article['review2'].'</td><td>'.$status.'</td></tr>';
+		// 	}
+		// }
 	}
 	/**
 	 * [getArticleAutor Hace..]
